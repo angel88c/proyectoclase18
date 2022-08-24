@@ -11,5 +11,20 @@ def curso(request):
     curso2.save()
     curso3.save()
     texto = f'Curso {curso.nombre} creado, comision: {curso.comision}'
-    
+
     return HttpResponse(texto)
+
+def inicio(request):
+    return render(request, 'AppCoder/index.html')
+
+def cursos(request):
+    return render(request, 'AppCoder/cursos.html')
+
+def estudiantes(request):
+    return render(request, 'AppCoder/estudiantes.html')
+
+def profesores(request):
+    return render(request, 'AppCoder/profesores.html')
+
+def entregables(request):
+    return render(request, 'AppCoder/entregables.html')
